@@ -1,0 +1,19 @@
+{
+    "cSpell.words": [
+        "aiohttp",
+        "astimezone",
+        "DDAL",
+        "rfile",
+        "wfile"
+    ],
+    "python.analysis.typeCheckingMode": "strict",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}

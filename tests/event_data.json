@@ -1,0 +1,56 @@
+{
+   "data" : {
+      "eventSessions" : {
+         "nodes" : [
+            {
+               "scenario" : {
+                  "name" : "DDAL05-01 Treasure of the Broken Hoard"
+               },
+               "scenarioOffering" : {
+                  "customName" : null
+               },
+               "signupUrl" : "https://warhorn.net/events/test-event/schedule/sessions/06df3e16-72fc-4752-8dce-3f04144c1247",
+               "slot" : {
+                  "endsAt" : "2021-12-24T20:00:00-08:00",
+                  "startsAt" : "2021-12-24T14:00:00-08:00",
+                  "timezone" : "America/Los_Angeles"
+               },
+               "status" : "PUBLISHED",
+               "uuid" : "06df3e16-72fc-4752-8dce-3f04144c1247"
+            },
+            {
+               "scenario" : {
+                  "name" : "DDAL05-01 Treasure of the Broken Hoard"
+               },
+               "scenarioOffering" : {
+                  "customName" : null
+               },
+               "signupUrl" : "https://warhorn.net/events/test-event/schedule/sessions/b870c57c-6c1f-48b9-bc73-0f492fb9a8d8",
+               "slot" : {
+                  "endsAt" : "2021-12-24T20:00:00-08:00",
+                  "startsAt" : "2021-12-24T14:00:00-08:00",
+                  "timezone" : "America/Los_Angeles"
+               },
+               "status" : "DRAFT",
+               "uuid" : "b870c57c-6c1f-48b9-bc73-0f492fb9a8d8"
+            },
+            {
+               "scenario" : {
+                  "name" : "The Nightmare at the Northpole"
+               },
+               "scenarioOffering" : {
+                  "customName" : null
+               },
+               "signupUrl" : "https://warhorn.net/events/test-event/schedule/sessions/e26a7dd8-2537-474c-8eae-fc2979eec73c",
+               "slot" : {
+                  "endsAt" : "2021-12-24T20:00:00-08:00",
+                  "startsAt" : "2021-12-24T14:00:00-08:00",
+                  "timezone" : "America/Los_Angeles"
+               },
+               "status" : "CANCELED",
+               "uuid" : "e26a7dd8-2537-474c-8eae-fc2979eec73c"
+            }
+         ]
+      }
+   }
+}
