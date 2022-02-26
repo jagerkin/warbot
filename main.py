@@ -20,8 +20,10 @@ an option if it gets enough users, but for now, if you want to ride on the
 authors service, file an issue against this project requesting it.
 """
 
-from argparse import Namespace
 import logging
+import sys
+
+from argparse import Namespace
 
 import args
 import config
@@ -33,7 +35,7 @@ from warbot_db import WarBotDB
 
 def main(flags: Namespace) -> None:
     """Initialize and start WarBot."""
-    logging.info('Warbot starting up in %s mode.', 'dry run' if flags.dry_run else 'live fire')
+    logging.info(f'Dry Run: {flags.dry_run}.')
     try:
         # Purely an asyncio speedup. Load and forget.
         import uvloop  # pylint: disable=import-outside-toplevel
@@ -55,4 +57,7 @@ def main(flags: Namespace) -> None:
 if __name__ == '__main__':
     flags = args.init()
     logs.init(logging.DEBUG if flags.debug else logging.INFO)
+    logging.info(f'WarBot starting.')
+    for i, arg in enumerate(sys.argv):
+        logging.info(f'arg[{i}]={arg}')
     main(flags)
