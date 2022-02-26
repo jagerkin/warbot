@@ -14,7 +14,7 @@
 USER="warbot"
 APPDIR="/usr/src/app"
 
-if [ -z "%{FLAGS}" ]; then
+if [ -z "${FLAGS}" ]; then
     FLAGS="--no-dry_run"
 fi
 
