@@ -50,7 +50,8 @@ class WarBot:  # pylint: disable=too-few-public-methods
         self._dry_run: bool = dry_run
         self._debug: bool = debug
         self._warhorn: WarhornAPI = warhorn
-        logging.debug('Discord Token: %s', self._config.token)
+        logging.debug('Warhorn Token: %s', self._config.warhorn_token)
+        logging.debug('Discord Token: %s', self._config.discord_token)
 
     async def _post_game(self, ch: ChannelConfig, venue: VenueConfig, game: Game) -> None:
         """Construct the Discord announcement embed and post it."""
@@ -96,6 +97,6 @@ class WarBot:  # pylint: disable=too-few-public-methods
 
     def run(self) -> None:
         """Execute the main bot, does not return until terminated."""
-        self._bot = hikari.GatewayBot(self._config.token)
+        self._bot = hikari.GatewayBot(self._config.discord_token)
         self._bot.event_manager.subscribe(StartedEvent, self._on_started)
         self._bot.run(asyncio_debug=self._debug)

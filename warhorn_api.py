@@ -152,13 +152,16 @@ class Game:
 class WarhornAPI:  # pylint: disable=too-few-public-methods
     """Warhorn client API."""
 
-    def __init__(self, url: str='https://warhorn.net/graphql') -> None:
+    def __init__(self, url: str='https://warhorn.net/graphql', token: str='') -> None:
         """Init Warhorn client.
 
         Args:
             url: Warhorn GraphQL endpoint.
         """
-        self._transport = AIOHTTPTransport(url=url)
+        headers = {}
+        if token:
+            headers['Authorization'] = f'Bearer {token}'
+        self._transport = AIOHTTPTransport(url=url, headers=headers)
         self._client = Client(transport=self._transport, fetch_schema_from_transport=False)
         gql_logger.setLevel(logging.WARNING)  # type: ignore
 

@@ -46,7 +46,7 @@ def main(flags: Namespace) -> None:
     bot = WarBot(
         conf,
         WarBotDB(flags.db, dry_run=flags.dry_run),
-        WarhornAPI(),
+        WarhornAPI(token=conf.warhorn_token),
         dry_run=flags.dry_run,
         debug=flags.debug)
     bot.run()

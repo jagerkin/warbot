@@ -53,11 +53,13 @@ class VenueConfig:  # pylint: disable=too-few-public-methods
 class Config:  # pylint: disable=too-few-public-methods
     """Top level WarBot config."""
 
-    __slots__ = 'token', 'poll_interval', 'venue'
+    __slots__ = 'discord_token', 'warhorn_token', 'poll_interval', 'venue'
 
-    def __init__(self, token: str, poll_interval: float, venue: CommentedSeq) -> None:
-        self.token: str = token
+    def __init__(self, discord_token: str, warhorn_token: str, poll_interval: float, venue: CommentedSeq) -> None:
+        self.discord_token: str = discord_token
         """Discord API Token, see https://discord.com/developers/applications/."""
+        self.warhorn_token: str = warhorn_token
+        """Warhorn API Token, see https://warhorn.net/developers/docs/guides/access-tokens."""
         self.poll_interval: float = poll_interval
         """Warhorn polling interval."""
         self.venue: Set[VenueConfig] = {VenueConfig(**v) for v in venue}  # type: ignore
