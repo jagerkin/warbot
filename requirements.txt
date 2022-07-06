@@ -25,7 +25,7 @@ absl-py==1.0.0
 aiofile==3.7.2
 gql==3.0.0rc0  # Be careful of accidental regressions to 2.x
 hikari==2.0.0.dev104
-lxml==4.7.1  # Hidden dep
+lxml==4.9.1  # Hidden dep
 prettyprinter==0.18.0
 pytz==2021.3
 ruamel.yaml==0.17.17
